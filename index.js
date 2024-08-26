@@ -9,7 +9,7 @@ const{app,server,io}=require("./socket.js")
 
 connect();
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:"https://social-media-frontend-oahk.onrender.com",
     credentials:true
 }));
 
