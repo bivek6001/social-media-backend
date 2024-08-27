@@ -7,7 +7,7 @@ const {Server} =require("socket.io")
 
 const io= new Server(server,{
     cors: {
-        origin: "*",
+        origin: "https://social-media-frontend-oahk.onrender.com",
         methods: ["GET", "POST"]
     }
 })
