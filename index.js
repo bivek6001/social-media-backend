@@ -9,8 +9,9 @@ const{app,server,io}=require("./socket.js")
 
 connect();
 app.use(cors({
-    origin:"https://social-media-frontend-oahk.onrender.com",
-    credentials:true
+    origin:"http://localhost:3000",
+    credentials:true,
+    exposedHeaders: 'token',
 }));
 
 app.use(express.json())

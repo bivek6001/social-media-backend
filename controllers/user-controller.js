@@ -38,7 +38,8 @@ const signin=async (req, res) => {
         }
         const token= await jwt.sign({id:user._id},"secret");
         
-        return res.cookie("token",token,{httpOnly:true}).json({message:`welcome back ${user.username} `,success:true,user});
+        res.set("token",token)
+        return res.json({message:`welcome back ${user.username} `,success:true,user});
 
         
     } catch (error) {

@@ -4,7 +4,8 @@ const jwt= require("jsonwebtoken")
 
 const authentication= async (req, res,next) =>{
     try {
-        const token =req.cookies.token;
+        const token =req.headers.token;
+        // console.log(token)
         if (!token) {
             return res.status(401).json({message: "No token provided", success: false});
         }
